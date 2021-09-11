@@ -1,88 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-div{
-    margin-left: 20px;
-    padding: 12px;
-}
-
-
-    </style>
+    <title>Form</title>
 </head>
+<style>
+    input {
+        width: 100%;
+    }
+
+    select {
+        width: 100%;
+    }
+    .required::after{
+        content:" *";
+        color: red;
+    }
+</style>
+
 <body>
-    <h1>Job Application</h1>
-    <p>please complete the form below to apply for a postition with us.</p>
-    <hr>
-    <form action="backend.js">
-    
-   <table border="0" cellpadding="5" cellspacing="0">
-<div>
-   <label >Full Name :</label>
-   
-   <input type="text" id="first name" class="input">
-
-   <label for="first name" class="name">First name</label>
-   
-   
-   <input type="text"  id="middle name" class="input">
-   <label for="middle name" class="input">Middle name</label>
-   
-   <input type="text" id="last name" class="input">
-   <label for="last name" class="input">Last name</label>
-</div>
-    
-        <div>
-            <label for="">Current Address :</label>
-            <input type="text" class="input">
-            <input type="text" class="input">
-            <input type="text"> 
-            <input type="text">
-            <input type="number">
-            
-        </div>
-        
-<div>
-    <label>Email Address</label>
-    <input type="email">
-</div>
-<div>
-    <label>Phone Number</label>
-    <input type="number">
-    <input type="number">
-
-</div>
-<div>
-    <label>Applying for Position</label>
-   <select>
-       <option value="web developer">developer</option>
-       <option value="web developer"> junior developer</option>
-       <option value="web developer"> senior developer</option>
-       <option value="web developer">team head</option>
-
-   </select>
-  
-</div>
-<div>
-    <label for="date">Start date</label>
-    <input type="date" pattern="mm dd yyyy">
-</div>
-<div>
-    <label for="">Upload Resume</label>
-    <input type="file" accept="image/png, image/jpg">
-</div>
-<div>
     <center>
-    <input type="submit">
-    </center>
-</div>
-</table>
-    </form>
 
+        <h1>Job Application</h1>
+        <p>please complete the form below to apply for a postition with us.</p>
+        <hr>
+    </center>
+  
+        <form action="backend.js">
+            <center>
+        <table  style="width: 50%;"  border="0" cellpadding="8" >
+           
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    
+                    
+                    <td><b> <label class="required"> Full Name</label></b></td>
+                    <td colspan="1"><input type="text" required></td>
+                    <th colspan="2" style="width: 20%;"><input type="text" required></td>
+                    <th colspan="3"><input type="text" required></td>
+
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>First Name</td>
+
+                    <td>Middle Name</td>
+                    <td></td>
+                    <td>Last Name</td>
+                </tr>
+
+                <tr>
+                    <td><b>Current Address</b></td>
+                    <td colspan="7"><input type="text"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>Street Address</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="7"><input type="text"></td>
+
+                </tr>
+                <tr>
+
+                    <td></td>
+                    <td>Street Address line2</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2"><input type="text"></td>
+                    <td colspan="3"><input type="text"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>City</td>
+                    <td></td>
+                    <td>State/Province</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="number"></td>
+                    <td></td>
+                    <td colspan="2">
+                        <select name="Please select" id="">
+                            <option value="">Please select</option>
+                            <option value="">India</option>
+                            <option value="">china</option>
+                            <option value="">pakistan</option>
+                            <option value="">indonesia</option>
+                            <option value="">america</option>
+                            <option value="">england</option>
+                            <option value="">new zealand</option>
+                            <option value="">corea</option>
+                            
+                            
+                        </select>
+                    </td>
+                    
+                    
+                    
+                </tr>
+                <tr>
+
+                    <td></td>
+                    <td>Zip/postal code</td>
+                    <td></td>
+                    <td>Country</td>
+
+                </tr>
+                <tr>
+                    <td><b><label for="" class="required">Email Address</label></b></td>
+                    <td colspan="3"><input type="email" placeholder="ex: myname@example.com"></td>
+                </tr>
+                <tr>
+                    <td><b>Phone Number</b></td>
+                    
+                    <td><input type="tel" maxlength="2" style="width: 50%;"></td>
+                   <td >-</td>
+                    <td colspan="2"><input type="tel" maxlength="10" ></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>areacode</td>
+                    <td></td>
+                    <td>Phone number</td>
+                </tr>
+                <tr>
+                    <td><b><label for="" class="required">Applying for Position</label></b></td>
+                    <td colspan="3"> <select>
+                        <option value="web developer"></option>
+                        <option value="web developer">developer</option>
+                        <option value="web developer"> junior developer</option>
+                        <option value="web developer"> senior developer</option>
+                        <option value="web developer">team head</option>
     
+                    </select></td>
+
+                </tr>
+                <tr>
+                    <td><b>Start date</b></td>
+                    <!-- <td><input type="tel" maxlength="2"></td>
+                    <td >-</td>
+                    <td><input type="tel" maxlength="2"></td>
+                    <td >-</td>
+                    <td><input type="tel" maxlength="4"></td> -->
+                    <td> <input type="date" value="2016-12-20" ></td>
+                    
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>(dd-mm-yyyy) format</td>
+                </tr>
+        <tr>
+            <td><b><label class="required">Upload Resume</label></b></td>
+            <td><input type="file" accept="image/png, image/jpg"></td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" style="width: 50%;"></td>
+        </tr>
+            </table>
+        </center>
+            </form>
+
 </body>
+
 </html>
